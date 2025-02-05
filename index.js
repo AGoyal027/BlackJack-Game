@@ -14,3 +14,14 @@ let cardsEl = document.getElementById("cards-el")
 let playerEl = document.getElementById("player-el")
 
 playerEl.textContent = player.name + ": $" + player.chips
+
+function getRandomCard() {
+    let randomNumber = Math.floor( Math.random()*13 ) + 1
+    if (randomNumber > 10) {
+        return 10
+    } else if (randomNumber === 1) {
+        return 11
+    } else {
+        return randomNumber
+    }
+}
