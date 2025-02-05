@@ -15,6 +15,15 @@ let playerEl = document.getElementById("player-el")
 
 playerEl.textContent = player.name + ": $" + player.chips
 
+function startGame() {
+    isAlive = true
+    let firstCard = getRandomCard()
+    let secondCard = getRandomCard()
+    cards = [firstCard, secondCard]
+    sum = firstCard + secondCard
+    renderGame()
+}
+
 function getRandomCard() {
     let randomNumber = Math.floor( Math.random()*13 ) + 1
     if (randomNumber > 10) {
